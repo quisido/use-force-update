@@ -1,0 +1,21 @@
+{
+  "name": "use-force-update",
+  "version": "1.0.0",
+  "author": "Charles Stover <npmjs@charlesstover.com>",
+  "bugs": {
+    "url": "https://github.com/CharlesStover/use-force-update/issues"
+  },
+  "description": "React Hook to force your functional component to update.",
+  "homepage": "https://github.com/CharlesStover/use-force-update#readme",
+  "license": "MIT",
+  "main": "use-force-update.js",
+  "repository": "https://github.com/CharlesStover/use-force-update.git",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "typescript": "^3.1.3"
+  }
+}
