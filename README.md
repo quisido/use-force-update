@@ -1,7 +1,7 @@
 # use-force-update
 `useForceUpdate` is a React Hook that forces your functional component to re-render.
 
-`useForceUpdate` is does not serve a purpose in and of itself.
+`useForceUpdate` does not serve a purpose in and of itself.
 It is a tiny package that aims to be integrated into larger hooks, making obsolete any class functionality that is still reliant on `this.forceUpdate`.
 
 ## Install
