@@ -13,6 +13,7 @@
     "noUnusedParameters": true,
     "outDir": ".",
     "removeComments": true,
+    "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
