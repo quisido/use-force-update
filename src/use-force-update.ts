@@ -1,4 +1,3 @@
-// @ts-ignore
 import { useState } from 'react';
 
 interface VoidFunction {
@@ -9,9 +8,10 @@ interface VoidFunctionCreator {
   (): VoidFunction;
 }
 
-const toggle = (state: boolean) => !state;
+const toggle = (state: boolean): boolean => !state;
+
 const useForceUpdate: VoidFunctionCreator = (): VoidFunction => {
-  const [ , setState ] = useState(false);
+  const [ , setState ] = useState<boolean>(true);
   const forceUpdate: VoidFunction = (): void => {
     setState(toggle);
   };
