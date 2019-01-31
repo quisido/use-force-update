@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "declaration": true,
     "downlevelIteration": true,
+    "jsx": "react",
     "lib": [ "dom", "es5", "es2015.promise", "scripthost" ],
     "module": "commonjs",
     "moduleResolution": "Node",
