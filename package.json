@@ -1,6 +1,6 @@
 {
   "name": "use-force-update",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "bugs": {
     "url": "https://github.com/CharlesStover/use-force-update/issues"
@@ -12,10 +12,19 @@
   "repository": "https://github.com/CharlesStover/use-force-update.git",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "mocha -r chai/register-expect -r ts-node/register tests/**/*.spec.tsx"
   },
   "devDependencies": {
-    "@types/react": "^16.4.18",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/react": "^16.8.0",
+    "@types/react-test-renderer": "^16.0.3",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "react": "^16.8.0-alpha.1",
+    "react-test-renderer": "^16.8.0-alpha.1",
+    "ts-node": "^8.0.2",
     "typescript": "^3.1.3"
   }
 }

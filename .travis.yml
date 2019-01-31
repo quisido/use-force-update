@@ -5,6 +5,7 @@ branches:
 cache: yarn
 install: yarn
 script:
+- yarn test
 - yarn build
 deploy:
   api_key:
