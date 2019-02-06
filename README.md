@@ -5,7 +5,7 @@
 `useForceUpdate` does not serve a purpose in and of itself.
 It is a tiny package that aims to be integrated into larger hooks, making obsolete any class functionality that is still reliant on `this.forceUpdate`.
 
-[![package](https://img.shields.io/github/package-json/v/CharlesStover/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
+[![package](https://img.shields.io/npm/v/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
 [![minified size](https://img.shields.io/bundlephobia/min/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
 [![minzipped size](https://img.shields.io/bundlephobia/minzip/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
 
