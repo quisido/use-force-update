@@ -1,4 +1,4 @@
-# use-force-update [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=useForceUpdate%20is%20a%20React%20Hook%20that%20forces%20your%20functional%20component%20to%20re-render!&url=https://www.npmjs.com/package/use-force-update&via=CharlesStover&hashtags=react,reactjs,javascript,typescript,webdev,webdevelopment)
+# useForceUpdate [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=useForceUpdate%20is%20a%20React%20Hook%20that%20forces%20your%20functional%20component%20to%20re-render!&url=https://www.npmjs.com/package/use-force-update&via=CharlesStover&hashtags=react,reactjs,javascript,typescript,webdev,webdevelopment)
 
 `useForceUpdate` is a React Hook that forces your functional component to re-render.
 
