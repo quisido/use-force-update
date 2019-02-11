@@ -1,20 +1,32 @@
 {
   "name": "use-force-update",
-  "version": "1.0.1",
-  "author": "Charles Stover <npmjs@charlesstover.com>",
+  "version": "1.0.2",
+  "author": "Charles Stover <use-force-update@charlesstover.com>",
   "bugs": {
+    "email" : "use-force-update@charlesstover.com",
     "url": "https://github.com/CharlesStover/use-force-update/issues"
   },
   "description": "React Hook to force your functional component to update.",
+  "directories": {
+    "lib": "src",
+    "test": "tests"
+  },
+  "files": [
+    "package.json",
+    "use-force-update.d.ts",
+    "use-force-update.js"
+  ],
   "homepage": "https://github.com/CharlesStover/use-force-update#readme",
   "license": "MIT",
   "main": "use-force-update.js",
-  "repository": "https://github.com/CharlesStover/use-force-update.git",
+  "repository": "github:CharlesStover/use-force-update",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "tsc",
     "test": "mocha -r chai/register-expect -r ts-node/register tests/**/*.spec.tsx"
   },
+  "types": "./use-force-update.d.ts",
+  "dependencies": { },
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",

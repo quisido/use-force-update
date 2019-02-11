@@ -1,6 +1,9 @@
 /node_modules
 /src
-.gitignore
-.npmignore
-.travis.yml
-tsconfig.json
+/tests
+/.gitignore
+/.npmignore
+/.travis.yml
+/tsconfig.json
+/use-force-update.js.map
+/yarn.lock
