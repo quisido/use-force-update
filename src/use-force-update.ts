@@ -1,21 +1,13 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 
-interface VoidFunction {
-  (): void;
-}
+type VoidFunction = () => void
+type VoidFunctionCreator = () => VoidFunction;
+type ToggleReducer = (state: boolean, action: void) => boolean;
 
-interface VoidFunctionCreator {
-  (): VoidFunction;
-}
+const reducer: ToggleReducer = state => !state;
 
-const toggle = (state: boolean): boolean => !state;
-
-const useForceUpdate: VoidFunctionCreator = (): VoidFunction => {
-  const [ , setState ] = useState<boolean>(true);
-  const forceUpdate: VoidFunction = (): void => {
-    setState(toggle);
-  };
-  return forceUpdate;
-};
+const useForceUpdate: VoidFunctionCreator = () => (
+  useReducer(reducer, true)[1] as VoidFunction
+);
 
 export default useForceUpdate;
