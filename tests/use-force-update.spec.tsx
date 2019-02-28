@@ -31,4 +31,10 @@ describe('useForceUpdate', () => {
     expect(renders).to.equal(2);
   });
 
+  it('update function should return undefined', () => {
+    expect(forceUpdate()).to.be.undefined;
+    // @ts-ignore test with parameters :shrug:
+    expect(forceUpdate('anything')).to.be.undefined;
+  });
+
 });
