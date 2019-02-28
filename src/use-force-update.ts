@@ -1,14 +1,21 @@
-import { useReducer } from 'react';
+import { useMemo, useReducer } from 'react';
 
 type VoidFunction = () => void;
-type VoidFunctionCreator = () => VoidFunction;
-type ToggleReducer = (state: boolean, action: void) => boolean;
 
-const reducer: ToggleReducer = state => !state;
+const reducer = (state: boolean, _action: null): boolean => !state;
 
-const useForceUpdate: VoidFunctionCreator = () => {
-  const [, dispatch] = useReducer(reducer, true);
-  return dispatch as VoidFunction;
+const useForceUpdate = (): VoidFunction => {
+  const [ , dispatch] = useReducer<boolean, null>(reducer, true);
+
+  // Turn dispatch(required_parameter) into dispatch().
+  const memoizedDispatch = useMemo(
+    (): VoidFunction =>
+      (): void => {
+        dispatch(null);
+      },
+    [ dispatch ]
+  );
+  return memoizedDispatch;
 };
 
 export default useForceUpdate;
