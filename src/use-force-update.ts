@@ -1,21 +1,8 @@
-import { useMemo, useReducer } from 'react';
+import { useRef, useState } from 'react';
 
-type VoidFunction = () => void;
-
-const reducer = (state: boolean, _action: null): boolean => !state;
-
-const useForceUpdate = (): VoidFunction => {
-  const [ , dispatch] = useReducer<boolean, null>(reducer, true);
-
-  // Turn dispatch(required_parameter) into dispatch().
-  const memoizedDispatch = useMemo(
-    (): VoidFunction =>
-      (): void => {
-        dispatch(null);
-      },
-    [ dispatch ]
-  );
-  return memoizedDispatch;
-};
+function useForceUpdate() {
+  const setValue = useState(0)[1]
+  return useRef(() => setValue(v => ~v)).current
+}
 
 export default useForceUpdate;
