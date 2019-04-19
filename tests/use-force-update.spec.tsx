@@ -28,9 +28,9 @@ describe('useForceUpdate', () => {
 
   });
 
-  it('should accept no parameters', () => {
+  it('should accept no parameters or one no-op parameter', () => {
     TestRenderer.create(<TestComponent />);
-    expect(forceUpdates[0].length).to.equal(0);
+    expect(forceUpdates[0].length).to.lte(1);
   });
 
   it('should maintain the same reference', () => {

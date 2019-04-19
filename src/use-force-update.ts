@@ -1,21 +1,15 @@
-import { useMemo, useReducer } from 'react';
+import { useReducer } from 'react';
+ 
+const reducer = (state: boolean, _action: void): boolean => !state;
 
-type VoidFunction = () => void;
+function useForceUpdate(){
+  /**
+   * see {@link https://reactjs.org/docs/hooks-faq.html#is-there-something-like-forceupdate }
+   */
+  const [, dispatch] = useReducer<boolean, void>(reducer, true) ;
 
-const reducer = (state: boolean, _action: null): boolean => !state;
-
-const useForceUpdate = (): VoidFunction => {
-  const [ , dispatch] = useReducer<boolean, null>(reducer, true);
-
-  // Turn dispatch(required_parameter) into dispatch().
-  const memoizedDispatch = useMemo(
-    (): VoidFunction =>
-      (): void => {
-        dispatch(null);
-      },
-    [ dispatch ]
-  );
-  return memoizedDispatch;
+  // Turn dispatch(void) into dispatch().
+  return dispatch as () => void;
 };
 
 export default useForceUpdate;
