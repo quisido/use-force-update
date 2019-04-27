@@ -1,4 +1,4 @@
-import { useMemo, useReducer } from 'react';
+import { useCallback, useReducer } from 'react';
 
 type VoidFunction = () => void;
 
@@ -8,12 +8,11 @@ const useForceUpdate = (): VoidFunction => {
   const [ , dispatch] = useReducer<boolean, null>(reducer, true);
 
   // Turn dispatch(required_parameter) into dispatch().
-  const memoizedDispatch = useMemo(
-    (): VoidFunction =>
-      (): void => {
-        dispatch(null);
-      },
-    [ dispatch ]
+  const memoizedDispatch = useCallback(
+    (): void => {
+      dispatch(null);
+    },
+    [ dispatch ],
   );
   return memoizedDispatch;
 };
