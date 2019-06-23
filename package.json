@@ -1,12 +1,12 @@
 {
   "name": "use-force-update",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
   "bugs": {
     "email" : "use-force-update@charlesstover.com",
     "url": "https://github.com/CharlesStover/use-force-update/issues"
   },
-  "description": "React Hook to force your functional component to update.",
+  "description": "React Hook to force your function component to update.",
   "directories": {
     "lib": "src",
     "test": "tests"
