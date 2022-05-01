@@ -1,6 +1,6 @@
 {
   "name": "use-force-update",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
   "bugs": {
     "email": "use-force-update@charlesstover.com",
@@ -38,5 +38,8 @@
     "react-test-renderer": "^16.8.6",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   }
 }
