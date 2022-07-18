@@ -1,3 +1,4 @@
+/**/*.gz
 /.git/
 /.idea/
 /.yarn/cache/
@@ -9,11 +10,13 @@
 /jest/
 /node_modules/
 /*.iml
+/*.md
 /.eslintcache
 /.pnp.cjs
 /.pnp.data.json
 /.pnp.js
 /.pnp.loader.mjs
 /.tsbuildinfo
-/yarn-error.log
+/LICENSE
+/yarn.lock
 .DS_Store

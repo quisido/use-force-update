@@ -1,29 +1,23 @@
 {
+  "extends": "@monorepo-template/react-module-tsconfig",
+  "include": ["**/*.ts", "**/*.tsx"],
+
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "declaration": true,
-    "downlevelIteration": true,
-    "jsx": "react",
-    "lib": [ "dom", "es5", "es2015.promise", "es2015.collection", "es2015.iterable", "scripthost" ],
-    "module": "commonjs",
-    "moduleResolution": "Node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "outDir": ".",
-    "removeComments": true,
-    "sourceMap": false,
-    "strict": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "es5"
+    "declarationDir": "./dist/types",
+    "jsx": "react"
   },
+
   "exclude": [
-    "node_modules",
-    "react"
-  ],
-  "files": [ "src/use-force-update.ts" ]
+    ".git/",
+    ".idea/",
+    ".yarn/cache/",
+    ".yarn/sdks/",
+    ".yarn/unplugged/",
+    "dist/",
+    "jest/",
+    "node_modules/",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

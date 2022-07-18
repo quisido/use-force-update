@@ -1,43 +1,80 @@
 {
   "name": "use-force-update",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
+  "description": "React Hook to force your function component to update.",
+  "homepage": "https://github.com/CharlesStover/use-force-update#readme",
+  "license": "MIT",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "packageManager": "yarn@3.2.1",
+  "repository": "github:CharlesStover/use-force-update",
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
   "bugs": {
     "email": "use-force-update@charlesstover.com",
     "url": "https://github.com/CharlesStover/use-force-update/issues"
   },
-  "description": "React Hook to force your function component to update.",
   "directories": {
-    "lib": "src",
-    "test": "tests"
+    "lib": "src"
   },
-  "files": [
-    "package.json",
-    "use-force-update.d.ts",
-    "use-force-update.js"
-  ],
-  "homepage": "https://github.com/CharlesStover/use-force-update#readme",
-  "license": "MIT",
-  "main": "use-force-update.js",
-  "repository": "github:CharlesStover/use-force-update",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/CharlesStover"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "tsc",
-    "test": "mocha -r chai/register-expect -r ts-node/register tests/**/*.spec.tsx"
+    "eslint": "eslint '**/*'",
+    "eslint:fix": "eslint '**/*' --fix",
+    "jest": "jest --runInBand",
+    "jest:watch": "jest --coverage=false --runInBand --watch",
+    "rollup": "rollup --config",
+    "rollup:watch": "rollup --config --watch"
   },
-  "types": "./use-force-update.d.ts",
-  "dependencies": {},
   "devDependencies": {
-    "@types/chai": "^4.1.7",
-    "@types/mocha": "^5.2.7",
-    "@types/react": "^16.8.23",
-    "@types/react-test-renderer": "^16.8.2",
-    "chai": "^4.2.0",
-    "mocha": "^6.1.4",
-    "react": "^16.8.6",
-    "react-test-renderer": "^16.8.6",
-    "ts-node": "^8.3.0",
-    "typescript": "^3.5.3"
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@monorepo-template/eslint-config-react-fixable": "^1.1.0",
+    "@monorepo-template/eslint-config-react-strict": "^1.1.0",
+    "@monorepo-template/eslint-config-react-typescript": "^1.0.0",
+    "@monorepo-template/eslint-config-typescript": "^1.1.1",
+    "@monorepo-template/eslint-config-typescript-fixable": "^1.1.0",
+    "@monorepo-template/eslint-config-typescript-strict": "^1.1.0",
+    "@monorepo-template/jest-module-preset": "^1.1.0",
+    "@monorepo-template/react-module-tsconfig": "^1.0.8",
+    "@monorepo-template/rollup-config": "^2.1.0",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.0.6",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "@yarnpkg/sdks": "^3.0.0-rc.12",
+    "babel-jest": "^28.1.3",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.77.0",
+    "rollup-plugin-insert": "^1.3.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
