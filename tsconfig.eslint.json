@@ -1,7 +1,7 @@
 {
   "exclude": [],
   "extends": "./tsconfig.json",
-  "include": ["**/*", "**/*.json", ".eslintrc.json"],
+  "include": ["**/*", "**/*.json", ".eslintrc.cjs"],
 
   "compilerOptions": {
     "types": ["jest", "node"]
