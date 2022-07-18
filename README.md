@@ -1,4 +1,8 @@
-# useForceUpdate [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=useForceUpdate%20is%20a%20React%20Hook%20that%20forces%20your%20functional%20component%20to%20re-render!&url=https://www.npmjs.com/package/use-force-update&via=CharlesStover&hashtags=react,reactjs,javascript,typescript,webdev,webdevelopment) [![version](https://img.shields.io/npm/v/use-force-update.svg)](https://www.npmjs.com/package/use-force-update) [![minzipped size](https://img.shields.io/bundlephobia/minzip/use-force-update.svg)](https://www.npmjs.com/package/use-force-update) [![downloads](https://img.shields.io/npm/dt/use-force-update.svg)](https://www.npmjs.com/package/use-force-update) [![build](https://api.travis-ci.com/CharlesStover/use-force-update.svg)](https://travis-ci.com/CharlesStover/use-force-update/)
+# useForceUpdate
+[![version](https://img.shields.io/npm/v/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
+[![downloads](https://img.shields.io/npm/dt/use-force-update.svg)](https://www.npmjs.com/package/use-force-update)
+[![build](https://github.com/CharlesStover/use-force-update/actions/workflows/use-force-update.yml/badge.svg?branch=main&event=push)](https://github.com/CharlesStover/use-force-update/actions/workflows/use-force-update.yml)
 
 `useForceUpdate` is a React Hook that forces your function component to
 re-render.
@@ -14,22 +18,56 @@ functionality that is still reliant on `this.forceUpdate()`.
 
 ## Use
 
+In its simplest form, `useForceUpdate` re-renders a component.
+
 ```jsx
-import React from 'react';
 import useForceUpdate from 'use-force-update';
+
+let renderCount = 0;
 
 export default function MyButton() {
   const forceUpdate = useForceUpdate();
 
-  const handleClick = React.useCallback(() => {
-    alert('I will re-render now.');
-    forceUpdate();
+  renderCount++;
+  return (
+    <>
+      <p>I have rendered {renderCount} times.</p>
+      <button onClick={forceUpdate}>
+        Re-render
+      </button>
+    </>
+  );
+};
+```
+
+In its ideal form, `useForceUpdate` integrates with event emitters, such as
+state managers.
+
+```jsx
+import { useEffect } from 'react';
+import useForceUpdate from 'use-force-update';
+import store from './store';
+
+export default function MyButton() {
+  const forceUpdate = useForceUpdate();
+
+  const username = store.get('username');
+
+  useEffect(() => {
+    // When the username changes, re-render this component.
+    const selector = state => state.username;
+    const unsubscribe = store.subscribe(selector, forceUpdate);
+
+    // When we unmount, stop re-rendering this component.
+    return () => {
+      unsubscribe();
+    };
   }, [forceUpdate]);
 
-  return (
-    <button onClick={handleClick}>
-      Re-render
-    </button>
-  );
+  if (username === null) {
+    return <p>You are not logged in.</p>;
+  }
+
+  return <p>Hello, {username}!</p>;
 };
 ```

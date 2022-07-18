@@ -1,0 +1,85 @@
+/.yarn/releases/* binary
+*                 text eol=lf
+*.3gpp            binary
+*.3gp             binary
+*.7z              binary
+*.ai              binary
+*.as              binary
+*.asf             binary
+*.asx             binary
+*.avi             binary
+*.bat             text eol=crlf
+*.bmp             binary
+*.cmd             text eol=crlf
+*.css             text diff=css
+*.eot             binary
+*.eps             binary
+*.exe             binary
+*.fla             binary
+*.flv             binary
+*.gif             binary
+*.gifv            binary
+*.gz              binary
+*.htm             text diff=html
+*.html            text diff=html
+*.ico             binary
+*.jar             binary
+*.jng             binary
+*.jp2             binary
+*.jpg             binary
+*.jpeg            binary
+*.jpx             binary
+*.jxr             binary
+*.kar             binary
+*.lock            text -diff
+*.m4a             binary
+*.m4v             binary
+*.map             text -diff
+*.markdown        text diff=markdown
+*.md              text diff=markdown
+*.mdown           text diff=markdown
+*.mdwn            text diff=markdown
+*.mid             binary
+*.midi            binary
+*.mkd             text diff=markdown
+*.mkdn            text diff=markdown
+*.mng             binary
+*.mov             binary
+*.mp3             binary
+*.mp4             binary
+*.mpeg            binary
+*.mpg             binary
+*.ogg             binary
+*.ogv             binary
+*.otf             binary
+*.pdf             binary
+*.php             text diff=php
+*.png             binary
+*.ps1             text eol=crlf
+*.psb             binary
+*.psd             binary
+*.py              text diff=python
+*.pyc             binary
+*.ra              binary
+*.rar             binary
+*.rb              text diff=ruby
+*.scss            text diff=css
+*.svgz            binary
+*.swc             binary
+*.swf             binary
+*.tar             binary
+*.tif             binary
+*.tiff            binary
+*.ttf             binary
+*.xhtml           text diff=html
+*.wbmp            binary
+*.webp            binary
+*.webm            binary
+*.woff            binary
+*.woff2           binary
+*.zip             binary
+.pnp.cjs          text -diff
+.pnp.js           text -diff
+.pnp.loader.mjs   text -diff
+package-lock.json text -diff
+pnpm-lock.yaml    text eol=lf -diff
