@@ -7,11 +7,12 @@
 /src/
 /.editorconfig
 /.eslintignore
+/.eslintrc.cjs
 /.eslintrc.json
 /.gitattributes
 /.gitignore
 /.npmignore
-/.prerttierrrc.json
+/.prettierrc.json
 /.tsbuildinfo
 /.yarnrc.yml
 /jest.config.mjs
