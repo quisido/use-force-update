@@ -1,6 +1,6 @@
 {
   "name": "use-force-update",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
   "description": "React Hook to force your function component to update.",
   "homepage": "https://github.com/CharlesStover/use-force-update#readme",
@@ -17,6 +17,12 @@
   },
   "directories": {
     "lib": "src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
   },
   "funding": {
     "type": "individual",
