@@ -7,7 +7,7 @@
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@3.3.0",
   "repository": "github:CharlesStover/use-force-update",
   "type": "module",
   "types": "./dist/types/index.d.ts",

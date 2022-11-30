@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Lint
-        run: yarn eslint
+        run: yarn run eslint
 
   jest:
     name: Jest
@@ -50,7 +50,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Unit test
-        run: yarn jest
+        run: yarn run jest
       - name: Upload coverage
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
@@ -74,7 +74,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
       - name: Build
-        run: yarn rollup
+        run: yarn run rollup
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
@@ -92,6 +92,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -100,11 +105,6 @@ jobs:
           node-version: 'lts/*'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@${{ github.repository_owner }}'
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
       - name: Publish
         env:
           NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -121,17 +121,17 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Download build
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           cache: yarn
           check-latest: true
           node-version: 'lts/*'
-      - name: Download build
-        uses: actions/download-artifact@v2
-        with:
-          name: dist
-          path: dist
       - name: Publish
         env:
           NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
