@@ -1,13 +1,13 @@
 {
   "name": "use-force-update",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
   "description": "React Hook to force your function component to update.",
   "homepage": "https://github.com/CharlesStover/use-force-update#readme",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
-  "packageManager": "yarn@3.2.1",
+  "packageManager": "yarn@3.3.0",
   "repository": "github:CharlesStover/use-force-update",
   "type": "module",
   "types": "./dist/types/index.d.ts",
@@ -20,6 +20,7 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs"
     }
