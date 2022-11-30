@@ -1,6 +1,6 @@
 {
   "name": "use-force-update",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "author": "Charles Stover <use-force-update@charlesstover.com>",
   "description": "React Hook to force your function component to update.",
   "homepage": "https://github.com/CharlesStover/use-force-update#readme",
