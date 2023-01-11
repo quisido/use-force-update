@@ -1,23 +1,4 @@
 {
-  "extends": "@monorepo-template/react-module-tsconfig",
-  "include": ["**/*.ts", "**/*.tsx"],
-
-  "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist/types",
-    "jsx": "react"
-  },
-
-  "exclude": [
-    ".git/",
-    ".idea/",
-    ".yarn/cache/",
-    ".yarn/sdks/",
-    ".yarn/unplugged/",
-    "dist/",
-    "jest/",
-    "node_modules/",
-    "**/*.test.ts",
-    "**/*.test.tsx"
-  ]
+  "extends": "@monorepo-template/tsconfig/react-module.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }

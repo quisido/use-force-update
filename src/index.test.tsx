@@ -1,3 +1,4 @@
+/// <reference types="jest" />
 import { act, render } from '@testing-library/react';
 import useForceUpdate from '.';
 
