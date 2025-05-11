@@ -1,19 +1,19 @@
 {
   "name": "use-force-update",
-  "version": "1.0.11",
-  "author": "Charles Stover <use-force-update@charlesstover.com>",
-  "description": "React Hook to force your function component to update.",
-  "homepage": "https://github.com/CharlesStover/use-force-update#readme",
+  "version": "1.0.12",
+  "author": "quisi.do <use-force-update@quisi.do>",
+  "description": "React hook to force your function component to re-render",
+  "homepage": "https://github.com/quisido/use-force-update#readme",
   "license": "MIT",
   "main": "./dist/cjs/index.cjs",
   "module": "./dist/esm/index.js",
   "packageManager": "yarn@3.3.1",
-  "repository": "github:CharlesStover/use-force-update",
+  "repository": "github:quisido/use-force-update",
   "type": "module",
   "types": "./dist/types/index.d.ts",
   "bugs": {
-    "email": "use-force-update@charlesstover.com",
-    "url": "https://github.com/CharlesStover/use-force-update/issues"
+    "email": "use-force-update@quisi.do",
+    "url": "https://github.com/quisido/use-force-update/issues"
   },
   "directories": {
     "lib": "src"
